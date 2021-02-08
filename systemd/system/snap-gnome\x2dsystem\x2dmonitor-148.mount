@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for gnome-system-monitor, revision 148
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/gnome-system-monitor_148.snap
+Where=/snap/gnome-system-monitor/148
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

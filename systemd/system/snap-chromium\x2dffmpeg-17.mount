@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for chromium-ffmpeg, revision 17
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/chromium-ffmpeg_17.snap
+Where=/snap/chromium-ffmpeg/17
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
